@@ -45,6 +45,17 @@ public class RunnerFetch01 {
         Student010 uniqueResult2 = session.createQuery(hqlQuery2, Student010.class).uniqueResult();
         System.out.println(uniqueResult2);
 
+        String hqlQuery3 = "from Student010 std where std.name='Ali Kocan'";
+        Student010 uniqueResult3 = session.createQuery(hqlQuery3, Student010.class).uniqueResult();
+        System.out.println(uniqueResult3);
+
+        // grade degeri 1000 olan ogrenciyi getirelim.
+        String hqlQuery4 = "select s.id,s.name from Student010 s where s.grade=1000";
+        List<Object[]> resultList4 = session.createQuery(hqlQuery4).getResultList();
+        for (Object[] object:resultList4){
+            System.out.println(Arrays.toString(object));
+        }
+
         tx.commit();
 
         session.close();
