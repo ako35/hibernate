@@ -8,10 +8,14 @@ public class Address {
     private String street;
     private String city;
     private String country;
+<<<<<<< HEAD
     private String zipCode;
 
     // Getter-Setter
 
+=======
+    private String zipcode;
+>>>>>>> 1345d3e77ea90f134743890cffd50ba648d7bba3
 
     public String getStreet() {
         return street;
@@ -37,6 +41,7 @@ public class Address {
         this.country = country;
     }
 
+<<<<<<< HEAD
     public String getZipCode() {
         return zipCode;
     }
@@ -47,13 +52,27 @@ public class Address {
 
     // toString()
 
+=======
+    public String getZipcode() {
+        return zipcode;
+    }
+
+    public void setZipcode(String zipcode) {
+        this.zipcode = zipcode;
+    }
+
+>>>>>>> 1345d3e77ea90f134743890cffd50ba648d7bba3
     @Override
     public String toString() {
         return "Address{" +
                 "street='" + street + '\'' +
                 ", city='" + city + '\'' +
                 ", country='" + country + '\'' +
+<<<<<<< HEAD
                 ", zipCode='" + zipCode + '\'' +
+=======
+                ", zipcode='" + zipcode + '\'' +
+>>>>>>> 1345d3e77ea90f134743890cffd50ba648d7bba3
                 '}';
     }
 }
