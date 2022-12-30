@@ -12,11 +12,11 @@
 
         <property name = "hibernate.connection.driver_class">org.postgresql.Driver</property>
 
-        <property name="connection.url">jdbc:postgresql://localhost:5432/courses_db2</property>
+        <property name="connection.url">jdbc:postgresql://localhost:5432/courses_db3</property>
 
-        <property name="connection.username">dev_user2</property>
+        <property name="connection.username">dev_user</property>
 
-        <property name="connection.password">dev_password2</property>
+        <property name="connection.password">dev_password</property>
 
         <!-- The SQL types nott same for the all data bases, so that specific database will have specific dialect -->
 
@@ -34,6 +34,11 @@
         <property name="show_sql">true</property>
 
         <property name="format_sql">true</property>
+
+        <!-- addAnnotatedClass() yapısını kullanmadan aşağıdaki gibi de Entity classlarımıeklliyebilirim
+        <mapping class="com.hb05.manytoone.Student05" />
+        <mapping class="com.hb05.manytoone.University" />
+        -->
 
 
     </session-factory>

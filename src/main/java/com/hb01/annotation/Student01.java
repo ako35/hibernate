@@ -2,23 +2,26 @@ package com.hb01.annotation;
 
 import javax.persistence.*;
 
+// @Entity annotation ı koyduğumuz sınıfı DB de bir tabloya karşılık getirir
 @Entity
-@Table(name="t_student01")
-public class Student01 {
+@Table(name="t_student01") // DB de tablo ismim "t_student01" olarak değişti
+public class Student01 { // DB'de  "student01" isminde tablo oluşturur.  t_adres
 
-    @Id
+    @Id // primary-key oluşmasını sağlıyor, Zorunlu alan
     // @Column(name="std_id")
     private int id;
 
-    @Column(name="student_name", length =100, nullable = false, unique = false)
+    // @Column zorunlu değil ancak customize edebilmek için gerekli
+    @Column(name="student_name", length = 100 , nullable = false, unique = false )
     private String name;
 
-    @Transient
+    // @Transient // DB deki tabloda "grade" adında bir kolon oluşmasını engeller
     private int grade;
 
-//    @Lob
-//    private byte[] image;
+//    @Lob // ---> large object ile büyük boyurlu datalar tutulabilir
+//    private byte[] image ;
 
+    // Getter-Setter *****************
 
     public int getId() {
         return id;
@@ -44,8 +47,10 @@ public class Student01 {
         this.grade = grade;
     }
 
+    // toString() ******************************
+
     @Override
-    public String toString() {
+    public String  toString() {
         return "Student01{" +
                 "id=" + id +
                 ", name='" + name + '\'' +
