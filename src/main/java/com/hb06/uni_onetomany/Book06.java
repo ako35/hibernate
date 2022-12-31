@@ -1,21 +1,15 @@
-package com.hb05.manytoone;
+package com.hb06.uni_onetomany;
 
-import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 
 @Entity
-public class University {
+public class Book06 {
 
     @Id
     private int id;
 
-    @Column(nullable = false,unique = true)
     private String name;
-
-
-// Getter- setter
-
 
     public int getId() {
         return id;
@@ -33,12 +27,9 @@ public class University {
         this.name = name;
     }
 
-    // toString();
-
-
     @Override
     public String toString() {
-        return "University{" +
+        return "Book06{" +
                 "id=" + id +
                 ", name='" + name + '\'' +
                 '}';
