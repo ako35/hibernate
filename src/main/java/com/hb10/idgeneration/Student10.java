@@ -11,7 +11,7 @@ public class Student10 {
     GenerationType.AUTO --> Hibernate otomatik olarak stratejiyi belirler.
     GenerationType.TABLE --> en yavasi, o yuzden cok kullanilmiyor, cunku id uretmek icin ekstra tablo olusturur.
  */
-    @GeneratedValue(generator = "sequence",strategy = GenerationType.SEQUENCE)
+    @GeneratedValue(generator = "sequence", strategy = GenerationType.SEQUENCE)
     @SequenceGenerator(
             name = "sequence",
             sequenceName = "student_seq",
